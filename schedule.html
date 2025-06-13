@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clear Vision Optometry</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <nav class="bg-gray-800 p-4">
+        <div class="flex items-center justify-between max-w-7xl mx-auto">
+            <!-- Logo Section -->
+            <div class="flex items-center space-x-2">
+                <a href="index.html">
+                    <img src="logo.png" alt="Logo" class="h-10 w-10">
+                </a>
+                </div>
+            <!-- Navigation Links -->
+            <ul class="flex space-x-4">
+                <li><a href="index.html" class="text-white hover:underline">Home</a></li>
+                <li><a href="about.html" class="text-white hover:underline">About the Doctor</a></li>
+                <li><a href="optical.html" class="text-white hover:underline">Optical</a></li>
+                <li><a href="services.html" class="text-white hover:underline">Services</a></li>
+                <li><a href="schedule.html" class="text-white hover:underline">Schedule Appointment</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main class="max-w-3xl mx-auto p-6 mt-10 bg-white rounded-lg shadow-lg">
+        <h2 class="text-4xl font-extrabold text-blue-900 mb-6 text-center">Schedule an Appointment</h2>
+        <section class="mb-8">
+            <p class="text-lg text-gray-700 mb-4 text-center">
+                Please fill out the form below to request an appointment. Our staff will contact you to confirm your appointment date and time.
+            </p>
+        </section>
+        <form class="space-y-6" action="#" method="POST">
+            <div>
+                <label class="block text-blue-900 text-sm font-semibold mb-2" for="name">
+                    Full Name
+                </label>
+                <input class="w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:ring-2 focus:ring-blue-400" id="name" name="name" type="text" required>
+            </div>
+            <div>
+                <label class="block text-blue-900 text-sm font-semibold mb-2" for="email">
+                    Email Address
+                </label>
+                <input class="w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:ring-2 focus:ring-blue-400" id="email" name="email" type="email" required>
+            </div>
+            <div>
+                <label class="block text-blue-900 text-sm font-semibold mb-2" for="phone">
+                    Phone Number
+                </label>
+                <input class="w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:ring-2 focus:ring-blue-400" id="phone" name="phone" type="tel" required>
+            </div>
+            <div>
+                <label class="block text-blue-900 text-sm font-semibold mb-2" for="date">
+                    Preferred Date
+                </label>
+                <input class="w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:ring-2 focus:ring-blue-400" id="date" name="date" type="date" required>
+            </div>
+            <div>
+                <label class="block text-blue-900 text-sm font-semibold mb-2" for="message">
+                    Additional Information
+                </label>
+                <textarea class="w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:ring-2 focus:ring-blue-400" id="message" name="message" rows="3" placeholder="Let us know anything else we should know..."></textarea>
+            </div>
+            <div class="flex justify-center"></div>
+                <button class="bg-blue-700 hover:bg-blue-800 text-white font-bold py-2 px-8 rounded-md shadow focus:outline-none focus:ring-2 focus:ring-blue-400 transition" type="submit">
+                    Request Appointment
+                </button>
+            </div>
+        </form>
+    </main>
+    <footer class="bg-gray-800 text-white p-4 mt-6">
+        <div class="max-w-7xl mx-auto text-center">
+            <p>&copy; 2025 Clear Vision Optometry. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -28,14 +28,14 @@
     <main class="max-w-7xl mx-auto p-6">
         <h1 class="text-3xl font-bold mb-4">Welcome to Clear Vision Optometry</h1>
 
-        <div class="relative rounded-lg overflow-hidden shadow-lg mb-8">
-            <img src="https://via.placeholder.com/1200x400?text=Clear+Vision+Optometry" alt="Hero Image" class="w-full h-72 object-cover">
+        <div class="relative rounded-lg overflow-hidden shadow-lg mb-8 h-[32rem] md:h-[40rem]">
+            <img src="assets/images/reception.jpg" alt="Hero Image" class="absolute inset-0 w-full h-full object-cover object-center">
             <div class="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center items-center">
-                <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-2 text-center">See the World Clearly</h2>
-                <p class="text-lg md:text-xl text-white mb-4 text-center">Comprehensive eye care for the whole family</p>
-                <a href="schedule.html" class="bg-blue-500 hover:bg-blue-600 text-white font-semibold px-6 py-2 rounded shadow">
-                    Schedule an Appointment
-                </a>
+            <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-2 text-center">See the World Clearly</h2>
+            <p class="text-lg md:text-xl text-white mb-4 text-center">Comprehensive eye care for the whole family</p>
+            <a href="schedule.html" class="bg-blue-500 hover:bg-blue-600 text-white font-semibold px-6 py-2 rounded shadow">
+                Schedule an Appointment
+            </a>
             </div>
         </div> <!-- Hero Section -->
 
@@ -76,21 +76,30 @@
             </div>
         </section><!-- New Ownership Announcement Section -->
 
-        <section class="mt-12 bg-white rounded-lg shadow p-6 max-w-md mx-auto">
-            <h2 class="text-xl font-bold mb-2 text-gray-800 text-center">Contact Us</h2>
-            <div class="text-gray-700 text-center">
-                <p class="mb-2">
-                    <span class="font-semibold">Address:</span><br>
-                    10219 196th St Ct E<br>
-                    Ste # A<br>
-                    Graham, WA 98338
-                </p>
-                <p>
-                    <span class="font-semibold">Phone:</span><br>
-                    <a href="tel:555-123-4567" class="text-blue-600 hover:underline">253-271-7313</a>
-                </p>
-            </div>
-        </section>
+        <div class="mt-12 flex justify-center">
+            <section class="bg-white rounded-lg shadow p-6 max-w-2xl w-full flex flex-col md:flex-row items-center md:space-x-8">
+                <div class="flex-1 text-center md:text-left mb-6 md:mb-0">
+                    <h2 class="text-xl font-bold mb-2 text-gray-800">Contact Us</h2>
+                    <div class="text-gray-700">
+                        <p class="mb-2">
+                            <span class="font-semibold">Address:</span><br>
+                            10219 196th St Ct E<br>
+                            Ste # A<br>
+                            Graham, WA 98338
+                        </p>
+                        <p>
+                            <span class="font-semibold">Phone:</span><br>
+                            <a href="tel:555-123-4567" class="text-blue-600 hover:underline">253-271-7313</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="flex-1 flex flex-col items-center">
+                    <h2 class="text-xl font-bold mb-2 text-gray-800 text-center md:text-left">Our Location</h2>
+                    <img src="assets/images/exterior.jpg" alt="Exterior of Clear Vision Optometry" class="rounded-lg shadow mb-2 w-full object-cover" style="max-height: 250px;">
+                    <p class="text-gray-700 text-center text-sm">Visit us at our Graham, WA location!</p>
+                </div>
+            </section>
+        </div>
 
     </main>
 

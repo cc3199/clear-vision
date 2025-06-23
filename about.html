@@ -29,43 +29,53 @@
     </nav>
     <main class="max-w-4xl mx-auto p-6 mt-8">
         <h2 class="text-3xl font-bold mb-8 text-center">Meet the Doctor</h2>
-        <div class="bg-white rounded-xl shadow-md p-6 mb-10 flex flex-col md:flex-row items-center md:space-x-8">
+        <div x-data="{ open: false }" class="bg-white rounded-xl shadow-md p-6 mb-10 flex flex-col md:flex-row items-center md:space-x-8">
             <img src="assets/images/Dr Pincock.jpg" alt="Doctor Zaccary Pincock" class="h-60 w-60 rounded-full object-cover mb-6 md:mb-0">
             <div>
                 <h3 class="text-2xl font-semibold text-gray-800">Dr. Zaccary Pincock</h3>
                 <p class="text-blue-700 font-medium">Doctor of Optometry</p>
-                <p class="mt-3 text-gray-700 leading-relaxed">
-                    Dr. Zaccary Pincock is an honors graduate of Pacific University College of Optometry.
-                    Throughout his schooling, Dr. Pincock worked at a clinic in Hillsboro, Oregon specializing in
-                    neurooptometric exams and testing. He is fluent in Spanish and also worked as an interpreter and a
-                    teacher’s assistant in the Spanish for Optometry class teaching others to provide this service to
-                    Spanish-speaking individuals. He enjoyed leading a team of fellow students on a volunteer mission
-                    trip to perform eye exams on hundreds of natives in Costa Rica who had previously been unable to
-                    obtain proper eye care.<br><br>
-                    During his clinical rotations, Dr. Pincock gained experience in a wide variety of practice modes. At
-                    the Community Health Center in Nipomo, California he performed examinations on the underserved
-                    population of California, focusing on primary care with an emphasis on ocular disease. He then
-                    worked at the Indian Health Services in Fort Hall, Idaho where he specialized in serving those with
-                    ocular diseases such as glaucoma and systemic illnesses like diabetes. Dr. Pincock completed an
-                    externship focused on pediatric vision therapy and sports vision where he specialized in treating
-                    children as young as three months old with large refractive errors and those with strabismus and
-                    amblyopia to realign their vision. He also helped patients born with optic nerve hypoplasia, fitting
-                    them for specialty glasses so they could drive and work in the community, as well as patients
-                    suffering from post-concussive syndrome from traumatic brain injury. Finally, Dr. Pincock finished
-                    his clinical rotations at the Veteran’s Affairs hospital in Spokane, Washington where he diagnosed
-                    and treated eye conditions such as glaucoma, diabetic retinopathy, macular degeneration, cancer of
-                    the eye, and cataracts.<br><br>
-                    Dr. Pincock began his optometric career in a rural community in Eastern New Mexico. He enjoyed the
-                    challenge of having to treat a variety of eye conditions and diseases. He was also able to refine
-                    his skills with specialty contact lenses. From his experience, he has developed a passion for
-                    helping others achieve their best possible vision with the aid of specialty contact lenses.<br><br>
-                    Dr. Pincock grew up in the small farming town of Blackfoot, Idaho. He and his wife have three
-                    energetic children—twin daughters and a son. In his free time, he enjoys playing the guitar,
-                    singing, football, movies, traveling, paddleboarding, and being outdoors. Dr. Pincock looks forward
-                    to serving you and your family.
-                </p>
+                <div>
+                    <p class="mt-3 text-gray-700 leading-relaxed line-clamp-5" :class="open ? 'line-clamp-none' : 'line-clamp-5'">
+                        Dr. Zaccary Pincock is an honors graduate of Pacific University College of Optometry.
+                        Throughout his schooling, Dr. Pincock worked at a clinic in Hillsboro, Oregon specializing in
+                        neurooptometric exams and testing. He is fluent in Spanish and also worked as an interpreter and a
+                        teacher’s assistant in the Spanish for Optometry class teaching others to provide this service to
+                        Spanish-speaking individuals. He enjoyed leading a team of fellow students on a volunteer mission
+                        trip to perform eye exams on hundreds of natives in Costa Rica who had previously been unable to
+                        obtain proper eye care.<br><br>
+                        During his clinical rotations, Dr. Pincock gained experience in a wide variety of practice modes. At
+                        the Community Health Center in Nipomo, California he performed examinations on the underserved
+                        population of California, focusing on primary care with an emphasis on ocular disease. He then
+                        worked at the Indian Health Services in Fort Hall, Idaho where he specialized in serving those with
+                        ocular diseases such as glaucoma and systemic illnesses like diabetes. Dr. Pincock completed an
+                        externship focused on pediatric vision therapy and sports vision where he specialized in treating
+                        children as young as three months old with large refractive errors and those with strabismus and
+                        amblyopia to realign their vision. He also helped patients born with optic nerve hypoplasia, fitting
+                        them for specialty glasses so they could drive and work in the community, as well as patients
+                        suffering from post-concussive syndrome from traumatic brain injury. Finally, Dr. Pincock finished
+                        his clinical rotations at the Veteran’s Affairs hospital in Spokane, Washington where he diagnosed
+                        and treated eye conditions such as glaucoma, diabetic retinopathy, macular degeneration, cancer of
+                        the eye, and cataracts.<br><br>
+                        Dr. Pincock began his optometric career in a rural community in Eastern New Mexico. He enjoyed the
+                        challenge of having to treat a variety of eye conditions and diseases. He was also able to refine
+                        his skills with specialty contact lenses. From his experience, he has developed a passion for
+                        helping others achieve their best possible vision with the aid of specialty contact lenses.<br><br>
+                        Dr. Pincock grew up in the small farming town of Blackfoot, Idaho. He and his wife have three
+                        energetic children—twin daughters and a son. In his free time, he enjoys playing the guitar,
+                        singing, football, movies, traveling, paddleboarding, and being outdoors. Dr. Pincock looks forward
+                        to serving you and your family.
+                    </p>
+                    <button @click="open = !open" class="mt-2 flex items-center text-blue-600 hover:underline focus:outline-none">
+                        <span x-text="open ? 'Read Less' : 'Read More'"></span>
+                        <svg :class="open ? 'rotate-180' : ''" class="ml-1 h-5 w-5 transition-transform duration-200" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </button>
+                </div>
             </div>
         </div>
+        <!-- Alpine.js for interactivity -->
+        <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
 
         <div class="bg-white rounded-xl shadow-md p-6 flex flex-col md:flex-row items-center md:space-x-8">
             <img src="assets/images/Dr. Pham.jpg" alt="Dr. Jeanette Pham" class="h-60 w-60 rounded-full object-cover mb-6 md:mb-0">
